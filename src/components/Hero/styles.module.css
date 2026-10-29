@@ -1,0 +1,35 @@
+.hero {
+  display: grid;
+  align-items: end;
+  min-height: 24rem;
+  padding: 2rem;
+  border-radius: var(--radius);
+  background-color: var(--color-brand);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.content {
+  max-width: 36rem;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background: rgb(7 63 84 / 0.85);
+}
+
+.content h1 {
+  margin-block: 0 0.5rem;
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: var(--color-text);
+  font-weight: 600;
+  text-decoration: none;
+}

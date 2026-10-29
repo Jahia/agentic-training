@@ -1,0 +1,4 @@
+[forsure:imageWithCaption] > jnt:content, forsuremix:sectionItem
+ - image (weakreference)
+ - imageAlt (string) i18n
+ - caption (string) i18n

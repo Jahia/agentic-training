@@ -1,0 +1,17 @@
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav a[aria-current="page"] {
+  border-bottom: 2px solid var(--color-accent);
+  font-weight: 600;
+}

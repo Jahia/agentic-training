@@ -1,0 +1,5 @@
+[forsure:section] > jnt:content, forsuremix:component orderable
+ - sectionTitle (string) i18n
+ - sectionSubtitle (string) i18n
+ - layout (string)
+ + * (forsuremix:sectionItem)

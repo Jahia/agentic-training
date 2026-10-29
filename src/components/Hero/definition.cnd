@@ -1,0 +1,5 @@
+[forsure:hero] > jnt:content, forsuremix:component, mix:title
+ - subtitle (string, textarea)
+ - background (weakreference, picker[type='image']) < jmix:image
+ - ctaLabel (string) i18n
+ - ctaLink (string)

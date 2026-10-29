@@ -1,0 +1,5 @@
+[forsure:testimonial] > jnt:content, jmix:droppableContent
+ - quote (string, textarea)
+ - name (string)
+ - photo (weakreference, picker[type='image']) i18n < jmix:image
+ - product (weakreference, picker[type='page']) < jnt:page

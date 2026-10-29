@@ -1,0 +1,19 @@
+.figure {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+}
+
+.figure img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.figure figcaption {
+  padding-top: 0.5rem;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}

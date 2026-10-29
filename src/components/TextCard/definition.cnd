@@ -1,0 +1,3 @@
+[forsure:textCard] > jnt:content, mix:title, forsuremix:sectionItem
+ - body (string, richtext) i18n
+ - features (string) i18n multiple

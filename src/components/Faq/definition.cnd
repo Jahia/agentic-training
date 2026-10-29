@@ -1,0 +1,5 @@
+[forsure:faq] > jnt:content, forsuremix:component, mix:title orderable
+ + * (forsure:faqItem)
+
+[forsure:faqItem] > jnt:content, mix:title
+ - answer (string, richtext) i18n

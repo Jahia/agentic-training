@@ -1,0 +1,22 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.grid a {
+  display: block;
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius);
+  background: var(--color-brand);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.grid a:hover {
+  background: var(--color-brand-dark);
+}
