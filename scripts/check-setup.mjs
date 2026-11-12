@@ -114,7 +114,11 @@ await check("For Sure site published in English and French", async () => {
     ]) {
       const url = `${host}/cms/render/live/${language}/sites/forsure/${page}.html`;
       const { status } = await fetch(url, { signal: AbortSignal.timeout(10_000) });
-      if (status !== 200) throw new Error(`${url} answered ${status}: run "yarn seed --reset"`);
+      if (status !== 200) {
+        throw new Error(
+          `${url} answered ${status}: run "yarn build", then "docker compose down && docker compose up --wait"`,
+        );
+      }
     }
   }
   return "8 pages";

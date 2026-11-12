@@ -13,11 +13,12 @@ services:
       DB_USER: jahia
       DB_PASS: dbpassword
       JPDA: true
-      EXECUTE_PROVISIONING_SCRIPT: "file:/mnt/jahia/provisioning.yml"
+      EXECUTE_PROVISIONING_SCRIPT: "file:/mnt/workspace/docker/provisioning.yml"
     volumes:
       - type: bind
-        source: ./docker
-        target: /mnt/jahia
+        source: .
+        target: /mnt/workspace
+        read_only: true
     healthcheck:
       test: ["CMD", "curl", "http://localhost:8080/start"]
       interval: 5s

@@ -24,14 +24,12 @@ and prove that each fix works.
 yarn install
 yarn playwright install chromium
 
-# Start Jahia in Docker (the first start takes a few minutes)
+# Build the module
+yarn build
+
+# Start Jahia in Docker. The first start takes a few minutes: it installs the module you built,
+# and imports the For Sure site
 docker compose up --wait
-
-# Build the module and deploy it to Jahia
-yarn build && yarn deploy
-
-# Create the For Sure site and its content
-yarn seed
 
 # Install the Jahia agentic harness for your agent, then restart your agent
 npx @jahia/agentic@latest
@@ -56,12 +54,14 @@ Then open the site:
 | ------------------ | ---------------------------------------------------------------- |
 | `yarn build`       | Builds the module into `dist/package.tgz`                        |
 | `yarn deploy`      | Deploys the build to Jahia                                       |
-| `yarn seed`        | Creates the For Sure site (`yarn seed --reset` recreates it)     |
 | `yarn mcp-token`   | Creates an API token and prints how to connect an agent over MCP |
 | `yarn check-setup` | Checks that your environment is ready for the training           |
 | `yarn test`        | Runs the end-to-end tests of `tests/`                            |
 | `yarn lint`        | Runs ESLint                                                      |
 | `yarn format`      | Runs Prettier                                                    |
+
+To start again from the original site, run `docker compose down && docker compose up --wait`: it deletes
+Jahia and its content.
 
 The default credentials and URL are `root:root1234` and `http://localhost:8080`. Change them in a `.env`
 file (`JAHIA_USER`, `JAHIA_HOST`) if your setup differs.

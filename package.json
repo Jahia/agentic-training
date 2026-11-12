@@ -18,7 +18,6 @@
     "lint": "eslint .",
     "mcp-token": "node scripts/mcp-token.mjs",
     "package": "yarn pack --out dist/package.tgz",
-    "seed": "node scripts/seed.mjs",
     "test": "playwright test",
     "watch": "run dev",
     "watch:callback": "run package && run deploy"
