@@ -60,7 +60,7 @@ await check("Docker", () => {
   }
 });
 
-await check("Jahia 8.2", async () => {
+await check("Jahia 8.2.3.4 or later", async () => {
   const data = await graphql(`
     {
       admin {
@@ -75,7 +75,15 @@ await check("Jahia 8.2", async () => {
     throw new Error(`no answer at ${host}: run "docker compose up --wait"`);
   });
   const { release } = data.admin.jahia.version;
-  if (!release.startsWith("8.2")) throw new Error(`found ${release}, expected 8.2`);
+  const parts = release.split(".").map(Number);
+  const difference = [8, 2, 3, 4]
+    .map((minimum, i) => (parts[i] ?? 0) - minimum)
+    .find((d) => d !== 0);
+  if (difference < 0) {
+    throw new Error(
+      `found ${release}: run "docker compose pull", then "docker compose down && docker compose up --wait"`,
+    );
+  }
   return release;
 });
 
