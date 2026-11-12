@@ -9,8 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
-      - run: corepack enable
-      - run: yarn install
+      # Fails when the committed cache doesn't match yarn.lock
+      - run: yarn install --immutable --immutable-cache --check-cache
       - run: yarn build
       - name: Prepare Artifact
         run: |

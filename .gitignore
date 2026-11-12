@@ -9,8 +9,9 @@
 dist
 node_modules
 
-# Yarn
+# Yarn (Zero-Installs: the cache and the release are committed)
 .yarn/*
+!.yarn/cache
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases

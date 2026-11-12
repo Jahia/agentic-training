@@ -45,7 +45,8 @@ await check("Node.js 22 or later", () => {
 
 await check("Yarn 4", () => {
   const version = execFileSync("yarn", ["--version"], { cwd: root, encoding: "utf8" }).trim();
-  if (!atLeast(version, 4)) throw new Error(`found ${version}, run "corepack enable"`);
+  if (!atLeast(version, 4))
+    throw new Error(`found ${version}, run "scripts/yarn" instead of "yarn"`);
   return version;
 });
 

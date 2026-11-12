@@ -1,0 +1,8 @@
+#!/bin/sh
+# Runs the Yarn release committed in .yarn/releases, for a machine where no `yarn` command works.
+# Usage: scripts/yarn install, scripts/yarn build, ...
+# Or once per terminal: alias yarn="$PWD/scripts/yarn"
+
+root=$(cd "$(dirname "$0")/.." && pwd)
+release=$(sed -n 's/^yarnPath: *//p' "$root/.yarnrc.yml")
+exec node "$root/$release" "$@"

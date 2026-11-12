@@ -21,6 +21,7 @@ export default defineConfig(
   // React
   eslintReact.configs["recommended-typescript"],
 
-  // Ignore the same files as .gitignore
+  // Ignore the same files as .gitignore, and the committed Yarn release and cache
   includeIgnoreFile(path.resolve(import.meta.dirname, ".gitignore")),
+  { ignores: [".yarn/"] },
 );

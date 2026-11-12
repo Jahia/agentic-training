@@ -10,7 +10,9 @@ and prove that each fix works.
 ## Prerequisites
 
 - [Docker](https://docs.docker.com/get-started/get-docker/)
-- [Node.js 22](https://nodejs.org/en/download) and Yarn 4 (`corepack enable`)
+- [Node.js 22+](https://nodejs.org/en/download) and a `yarn` command of any version (`corepack enable` or
+  `npm install --global yarn`). The repository holds Yarn 4 and every dependency, so `yarn install` needs
+  no network. If no `yarn` command works on your machine, use `scripts/yarn` instead of `yarn`.
 - An AI coding agent: Claude Code, Codex, GitHub Copilot, Cursor, Gemini, Windsurf, Kiro, OpenCode or
   Antigravity
 - An IDE ([VS Code](https://code.visualstudio.com/) recommended)
